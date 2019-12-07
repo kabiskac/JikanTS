@@ -3,11 +3,7 @@ import ow from "ow";
 
 // Interfaces
 import { Characters } from "./interfaces/manga/Characters";
-import { Forum } from "./interfaces/manga/Forum";
-import { MoreInfo } from "./interfaces/manga/MoreInfo";
 import { News } from "./interfaces/manga/News";
-import { Pictures } from "./interfaces/manga/Pictures";
-import { Recommendations } from "./interfaces/manga/Recommendations";
 import { Reviews } from "./interfaces/manga/Reviews";
 import { Stats } from "./interfaces/manga/Stats";
 import { UserUpdates } from "./interfaces/manga/UserUpdates";
@@ -47,7 +43,7 @@ const forum = async (id: number) => {
       async () => await api(`/manga/${id}/forum`, {})
     );
 
-    return body as Forum;
+    return body;
   } catch (error) {
     Logger.error(error);
   }
@@ -66,7 +62,7 @@ const moreInfo = async (id: number) => {
       async () => await api(`/manga/${id}/moreinfo`, {})
     );
 
-    return body as MoreInfo;
+    return body;
   } catch (error) {
     Logger.error(error);
   }
@@ -104,7 +100,7 @@ const pictures = async (id: number) => {
       async () => await api(`/manga/${id}/pictures`, {})
     );
 
-    return body as Pictures;
+    return body;
   } catch (error) {
     Logger.error(error);
   }
@@ -123,7 +119,7 @@ const recommendations = async (id: number) => {
       async () => await api(`/manga/${id}/recommendations`, {})
     );
 
-    return body as Recommendations;
+    return body;
   } catch (error) {
     Logger.error(error);
   }

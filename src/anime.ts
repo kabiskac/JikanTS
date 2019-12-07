@@ -8,7 +8,6 @@ import { Episodes } from "./interfaces/anime/Episodes";
 import { Forum } from "./interfaces/anime/Forum";
 import { MoreInfo } from "./interfaces/anime/MoreInfo";
 import { News } from "./interfaces/anime/News";
-import { Pictures } from "./interfaces/anime/Pictures";
 import { Recommendations } from "./interfaces/anime/Recommendations";
 import { Reviews } from "./interfaces/anime/Reviews";
 import { Stats } from "./interfaces/anime/Stats";
@@ -145,7 +144,7 @@ const pictures = async (id: number) => {
       async () => await api(`/anime/${id}/pictures`, {})
     );
 
-    return body as Pictures;
+    return body;
   } catch (error) {
     Logger.error(error);
   }

@@ -2,7 +2,6 @@
 import ow from "ow";
 
 // Interfaces
-import { Pictures } from "./interfaces/person/Pictures";
 
 // Utils
 import { api, Logger, queue } from "./utils";
@@ -20,7 +19,7 @@ const pictures = async (id: number) => {
       async () => await api(`/person/${id}/pictures`, {})
     );
 
-    return body as Pictures;
+    return body;
   } catch (error) {
     Logger.error(error);
   }
