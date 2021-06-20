@@ -9,9 +9,9 @@ import { Pictures } from "./interfaces/character/Pictures";
 import { api, Logger, queue } from "./utils";
 
 /**
- * Fetches the anime with the given ID
+ * Fetches the character with the given ID
  *
- * @param id - The anime id
+ * @param id - The character id
  */
 const byId = async (id: number) => {
   try {
