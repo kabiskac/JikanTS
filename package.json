@@ -28,9 +28,6 @@
     "typedoc": "^0.15.0",
     "typescript": "^3.6.3"
   },
-  "files": [
-    "dist/**/*"
-  ],
   "homepage": "https://github.com/Julien-Broyard/jikants#readme",
   "husky": {
     "hooks": {
