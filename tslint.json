@@ -4,6 +4,7 @@
     "exclude": ["node_modules/**/*.ts", "dist/**/*.ts"]
   },
   "rules": {
-    "interface-name": [true, "never-prefix"]
+    "interface-name": [true, "never-prefix"],
+    "no-empty-interface": false
   }
 }
