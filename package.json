@@ -55,7 +55,9 @@
     "build": "tsc",
     "docs": "typedoc --out docs ./src --mode file",
     "lint": "yarn tslint && yarn prettier",
-    "prepare": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
     "pre-commit": "yarn lint",
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "tslint": "tslint --project tsconfig.json --fix"
