@@ -30,5 +30,5 @@ export interface CharacterById {
   readonly image_url: string;
   readonly animeography: Animeography[];
   readonly mangaography: Mangaography[];
-  voice_actors: VoiceActor[];
+  readonly voice_actors: VoiceActor[];
 }

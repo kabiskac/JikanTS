@@ -1,3 +1,5 @@
+import { SimpleInfo2 } from "interfaces/common/SimpleInfo2";
+
 export interface Filters {
   end_date?: string;
   genre_exclude?: 0 | 1;
@@ -15,7 +17,7 @@ export interface Search {
   readonly request_hash: string;
   readonly request_cached: boolean;
   readonly request_cache_expiry: number;
-  readonly results: Result[];
+  readonly results: AnimeResult[] | VoiceActorResult[];
   readonly last_page: number;
 }
 
@@ -38,7 +40,7 @@ export type SearchTypes =
 
 type Status = "airing" | "completed" | "complete" | "tba" | "upcoming";
 
-interface Result {
+interface AnimeResult {
   readonly airing: boolean;
   readonly end_date: Date | null;
   readonly episodes: number;
@@ -52,6 +54,16 @@ interface Result {
   readonly title: string;
   readonly type: Type;
   readonly url: string;
+}
+
+interface VoiceActorResult {
+  readonly mal_id: number;
+  readonly url: string;
+  readonly image_url: string;
+  readonly name: string;
+  readonly alternative_names: string[];
+  readonly anime: SimpleInfo2[];
+  readonly manga: SimpleInfo2[];
 }
 
 enum Type {
